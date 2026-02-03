@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+img, video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+video {
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<img id="img" src="imagen.jpg" alt="">
+<video id="vid" muted playsinline>
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+<script>
+document.body.addEventListener('click', () => {
+    const img = document.getElementById('img');
+    const vid = document.getElementById('vid');
+    img.style.display = 'none';
+    vid.style.display = 'block';
+    vid.play();
+});
+</script>
+
+</body>
+</html>
